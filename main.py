@@ -1,5 +1,4 @@
-numbers = [10, 15, 20, 25, 30]
-total = 0
+import requests
 
 for i in range(0, len(numbers)):
 main
@@ -12,7 +11,7 @@ main
     else:
         print("Odd number:", numbers[i])
 
-print("Total of even numbers:", total)
+response = requests.get(url)
 
 count = 0
 while count < len(numbers):
@@ -25,6 +24,21 @@ main
         print("Large:", numbers[count])
         count = count + 2
 
+ feature/api-calls
+    current = data["current_condition"][0]
+
+    temperature = current["temp_C"]
+    feels_like = current["FeelsLikeC"]
+    humidity = current["humidity"]
+    condition = current["weatherDesc"][0]["value"]
+
+    print("===== Dehradun Weather =====")
+    print("Temperature :", temperature, "°C")
+    print("Feels Like  :", feels_like, "°C")
+    print("Humidity    :", humidity, "%")
+    print("Condition   :", condition)
+else:
+    print("API request failed:", response.status_code)
 for num in numbers:
     print("Square:", num ** 2)
 main
