@@ -7,6 +7,7 @@ response = requests.get(url)
 if response.status_code == 200:
     data = response.json()
 
+ feature/api-calls
     current = data["current_condition"][0]
 
     temperature = current["temp_C"]
@@ -21,3 +22,7 @@ if response.status_code == 200:
     print("Condition   :", condition)
 else:
     print("API request failed:", response.status_code)
+for num in numbers:
+    print("Square:", num ** 2)
+    main
+ main
