@@ -1,7 +1,6 @@
 import requests
 
 for i in range(0, len(numbers)):
-main
     if(numbers[i] % 2== 0):
     if numbers[i] % 2 == 0:
       
@@ -41,6 +40,3 @@ else:
     print("API request failed:", response.status_code)
 for num in numbers:
     print("Square:", num ** 2)
-main
-main
-main
