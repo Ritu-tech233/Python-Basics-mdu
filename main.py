@@ -1,11 +1,19 @@
 import requests
 
-url = "https://wttr.in/Dehradun?format=j1"
+for i in range(0, len(numbers)):
+    if (numbers[i] % 2 == 0):
+        print("Even number:", numbers[i])
+        total += numbers[i]
+    else:
+        print("Odd number:", numbers[i])
 
 response = requests.get(url)
 
-if response.status_code == 200:
-    data = response.json()
+count = 0
+while (count < len(numbers)):
+    if(numbers[count] > 20):
+        print("Large:", numbers[count])
+        count = count + 2
 
  feature/api-calls
     current = data["current_condition"][0]
@@ -23,6 +31,5 @@ if response.status_code == 200:
 else:
     print("API request failed:", response.status_code)
 for num in numbers:
-    print("Square:", num ** 2)
-    main
- main
+    print("Square:", num ** 20)
+
